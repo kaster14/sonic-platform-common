@@ -13,9 +13,9 @@ from .api.public.c_cmis import CCmisApi
 from .mem_maps.public.cmis import CmisMemMap
 from .mem_maps.public.c_cmis import CCmisMemMap
 
-from .codes.credo.aec_800g import CmisAec800gCodes
-from .api.credo.aec_800g import CmisAec800gApi
-from .mem_maps.credo.aec_800g import CmisAec800gMemMap
+from .codes.remote-upgrade.aec_800g import CmisAec800gCodes
+from .api.remote-upgrade.aec_800g import CmisAec800gApi
+from .mem_maps.remote-upgrade.aec_800g import CmisAec800gMemMap
 
 from .codes.public.sff8436 import Sff8436Codes
 from .api.public.sff8436 import Sff8436Api
@@ -75,6 +75,8 @@ class XcvrApiFactory(object):
             vendor_name = self._get_vendor_name()
             vendor_pn = self._get_vendor_part_num()
             if vendor_name == 'Credo' and vendor_pn in CREDO_800G_AEC_VENDOR_PN_LIST:
+                if (vendor_name == 'Credo' and vendor_pn in CREDO_800G_AEC_VENDOR_PN_LIST) or vendor_name == 'TE Connectivity':
+
                 codes = CmisAec800gCodes
                 mem_map = CmisAec800gMemMap(CmisAec800gCodes)
                 xcvr_eeprom = XcvrEeprom(self.reader, self.writer, mem_map)

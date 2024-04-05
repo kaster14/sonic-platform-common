@@ -1,7 +1,9 @@
 """
     aec_800g.py
 
-    Implementation of Credo AEC cable specific XcvrMemMap for CMIS Rev 5.0
+    Implementation of AEC cable specific XcvrMemMap for CMIS Rev 5.0
+    Used in conjunction with the set_firmware_download_target_end command for remote upgrade. 
+    Supported by TE Connectivity and Credo as of April 5th 2024.
 """
 
 from ..public.cmis import CmisMemMap

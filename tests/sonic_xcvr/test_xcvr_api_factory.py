@@ -2,10 +2,10 @@ from unittest.mock import patch
 from mock import MagicMock
 import pytest
 
-from sonic_platform_base.sonic_xcvr.api.credo.aec_800g import CmisAec800gApi
-from sonic_platform_base.sonic_xcvr.mem_maps.credo.aec_800g import CmisAec800gMemMap
+from sonic_platform_base.sonic_xcvr.api.remote-upgrade.aec_800g import CmisAec800gApi
+from sonic_platform_base.sonic_xcvr.mem_maps.remote-upgrade.aec_800g import CmisAec800gMemMap
 from sonic_platform_base.sonic_xcvr.xcvr_eeprom import XcvrEeprom
-from sonic_platform_base.sonic_xcvr.codes.credo.aec_800g import CmisAec800gCodes
+from sonic_platform_base.sonic_xcvr.codes.remote-upgrade.aec_800g import CmisAec800gCodes
 from sonic_platform_base.sonic_xcvr.fields import consts
 from sonic_platform_base.sonic_xcvr.xcvr_api_factory import XcvrApiFactory
 from sonic_platform_base.sonic_xcvr.api.public.sff8636 import Sff8636Api

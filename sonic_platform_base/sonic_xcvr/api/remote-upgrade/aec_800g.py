@@ -1,7 +1,8 @@
 """
     aec_800g.py
 
-    Implementation of Credo AEC cable specific in addition to the CMIS specification.
+    Implementation of set_firmware_download_target_end for remote upgrade. 
+    Supported by TE Connectivity and Credo as of April 5th 2024
 """
 
 from ...fields import consts
