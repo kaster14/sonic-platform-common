@@ -74,9 +74,7 @@ class XcvrApiFactory(object):
         if id == 0x18 or id == 0x19 or id == 0x1e:
             vendor_name = self._get_vendor_name()
             vendor_pn = self._get_vendor_part_num()
-            if vendor_name == 'Credo' and vendor_pn in CREDO_800G_AEC_VENDOR_PN_LIST:
-                if (vendor_name == 'Credo' and vendor_pn in CREDO_800G_AEC_VENDOR_PN_LIST) or vendor_name == 'TE Connectivity':
-
+            if (vendor_name == 'Credo' and vendor_pn in CREDO_800G_AEC_VENDOR_PN_LIST) or vendor_name == 'TE Connectivity':
                 codes = CmisAec800gCodes
                 mem_map = CmisAec800gMemMap(CmisAec800gCodes)
                 xcvr_eeprom = XcvrEeprom(self.reader, self.writer, mem_map)
